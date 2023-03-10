@@ -53,3 +53,28 @@ body {
   padding: 1.4rem;
   text-decoration: none;
 }
+
+/* Configurações da seção sobre: */
+.sobre {
+  align-items: center;
+  background: linear-gradient(62deg, #3a3d40 0%, #181719 100%);
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  width: 100%;
+}
+
+.sobre-titulo {
+  font-family: "Raleway", sans-serif;
+  font-size: 3.9rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.sobre-paragrafo {
+  color: var(--cor-cabecalho);
+  font-size: 2rem;
+  font-style: italic;
+  font-weight: 200;
+}
