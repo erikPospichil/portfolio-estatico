@@ -208,3 +208,21 @@ a {
 .contato-detalhes:hover {
   transform: translateY(3px);
 }
+
+/* Configurações do rodapé: */
+.rodape {
+  background: var(--cor-cinza);
+  border-top: 4px solid var(--cor-vermelha);
+  display: flex;
+  font-weight: 300;
+  justify-content: space-evenly;
+  padding: 1rem;
+}
+
+.rodape > p {
+  margin: 1rem;
+}
+
+.rodape i {
+  vertical-align: middle;
+}
