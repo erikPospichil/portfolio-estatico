@@ -1,6 +1,8 @@
 :root {
-  --cor-cabecalho: #be3144;
-  --cor-texto: #f0f0f0;
+  --cor-azul: #45567d;
+  --cor-branca: #f0f0f0;
+  --cor-cinza: #303841;
+  --cor-vermelha: #be3144;
 }
 
 /* Configurações gerais da página: */
@@ -21,15 +23,25 @@ html {
 }
 
 body {
-  color: var(--cor-texto);
+  color: var(--cor-branca);
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   line-height: 1.4;
 }
 
+img {
+  display: block;
+  width: 100%;
+}
+
+a {
+  color: var(--cor-branca);
+  text-decoration: none;
+}
+
 /* Configurações do menu de navegação: */
 .cabecalho {
-  background: var(--cor-cabecalho);
+  background: var(--cor-vermelha);
   box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
   display: flex;
   justify-content: flex-end;
@@ -47,11 +59,9 @@ body {
 }
 
 .lista-link {
-  color: var(--cor-texto);
   display: block;
   font-size: 1.3rem;
   padding: 1.4rem;
-  text-decoration: none;
 }
 
 /* Configurações da seção sobre: */
@@ -65,16 +75,96 @@ body {
   width: 100%;
 }
 
-.sobre-titulo {
+.sobre-titulo,
+.projetos-titulo {
   font-family: "Raleway", sans-serif;
-  font-size: 3.9rem;
   font-weight: 700;
   text-align: center;
 }
 
+.sobre-titulo {
+  font-size: 3.9rem;
+}
+
 .sobre-paragrafo {
-  color: var(--cor-cabecalho);
+  color: var(--cor-vermelha);
   font-size: 2rem;
   font-style: italic;
   font-weight: 200;
+}
+
+/* Configurações da seção projetos: */
+.projetos {
+  background: var(--cor-azul);
+  padding: 10rem 2rem;
+  text-align: center;
+}
+
+.projetos-titulo {
+  border-bottom: 0.2rem solid var(--cor-branca);
+  font-size: 2.6rem;
+  margin: 0 auto 6rem auto;
+  max-width: 640px;
+}
+
+.projetos-grid {
+  display: grid;
+  grid-gap: 4rem;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  margin: 0 auto;
+  margin-bottom: 6rem;
+  max-width: 1280px;
+  width: 100%;
+}
+
+.projeto {
+  background: var(--cor-cinza);
+  border-radius: 2px;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.code {
+  color: var(--cor-cinza);
+  transition: color 0.3s ease-out;
+}
+
+.projeto:hover .code {
+  color: #ff7f50;
+}
+
+.projetos-imagem {
+  height: calc(100% - 4rem);
+  object-fit: cover;
+  width: 100%;
+}
+
+.projetos-paragrafo {
+  font-size: 1.1rem;
+  padding: 1.2rem 0.5rem;
+}
+
+.projetos-mais {
+  display: inline-block;
+  border-radius: 2px;
+  padding: 1rem 2rem;
+}
+
+.botao {
+  background: var(--cor-cinza);
+  font-size: 1.2rem;
+  transition: background 0.3s ease-out;
+}
+
+.botao:hover {
+  background: var(--cor-vermelha);
+}
+
+.botao:hover > i {
+  transform: translateX(2px);
+}
+
+.botao > i {
+  margin-left: 10px;
+  transform: translateX(0);
+  transition: transform 0.3s ease-out;
 }
